@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.14.0
+
+* Enable SSI (Single Step Instrumentation) on GKE Autopilot by always rendering the `storage-dir` volume/mount and the `DD_APM_ENABLED` env var, and by adding a new `datadog-datadog-csi-driver-daemonset-exemption-v1.1.0` allowlist entry.
+
 ## 0.13.0
 
 * Add `driver.resources` value to configure resource requests and limits for the CSI driver container.
