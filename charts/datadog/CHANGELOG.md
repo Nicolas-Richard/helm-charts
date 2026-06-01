@@ -1,5 +1,9 @@
 # Datadog changelog
 
+## 3.216.0
+
+* [Host Profiler] Remove seccomp configmap and use profile baked into image ([#2698](https://github.com/DataDog/helm-charts/pull/2698)).
+
 ## 3.215.1
 
 * Add `datadog.kubeStateMetricsCore.useApiServerCache` to enable the use of the API server cache in the Kube Metrics Core check.
