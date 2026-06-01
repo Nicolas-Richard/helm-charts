@@ -497,7 +497,7 @@ helm install <RELEASE_NAME> \
 | agents.containers.hostProfiler.envDict | object | `{}` | Set environment variables specific to host-profiler defined in a dict |
 | agents.containers.hostProfiler.envFrom | list | `[]` | Set environment variables specific to host-profiler from configMaps and/or secrets |
 | agents.containers.hostProfiler.resources | object | `{}` | Resource requests and limits for the host-profiler container |
-| agents.containers.hostProfiler.securityContext | object | `{"capabilities":{"add":["BPF","PERFMON","SYS_PTRACE","SYS_RESOURCE","DAC_READ_SEARCH","SYSLOG","CHECKPOINT_RESTORE"]},"privileged":false,"readOnlyRootFilesystem":true}` | Allows you to overwrite the default container SecurityContext for the host-profiler container. |
+| agents.containers.hostProfiler.securityContext | object | `{"allowPrivilegeEscalation":false,"capabilities":{"add":["BPF","PERFMON","SYS_PTRACE","SYS_RESOURCE","DAC_READ_SEARCH","SYSLOG","CHECKPOINT_RESTORE"],"drop":["ALL"]},"privileged":false,"readOnlyRootFilesystem":true}` | Allows you to overwrite the default container SecurityContext for the host-profiler container. |
 | agents.containers.hostProfiler.volumeMounts | list | `[]` | Specify additional volumes to mount in the host-profiler container |
 | agents.containers.initContainers.resources | object | `{}` | Resource requests and limits for the init containers |
 | agents.containers.initContainers.securityContext | object | `{}` | Allows you to overwrite the default container SecurityContext for the init containers. |
